@@ -49,13 +49,7 @@ export default defineConfig({
     esbuildOptions: {
       target: "es2020",
       supported: { bigint: true },
-      plugins: [
-        NodeGlobalsPolyfillPlugin({
-          process: true,
-          buffer: true,
-        }),
-        NodeModulesPolyfillPlugin(),
-      ],
+      plugins: [NodeModulesPolyfillPlugin()],
     },
   },
   build: {
